@@ -258,7 +258,9 @@ class _AnalyticspageState extends State<Analyticspage> {
                                     onPressed: () => Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => Openedanalytics(nutrient: widget.nutrient,),
+                                        builder: (context) => Openedanalytics(
+                                          nutrient: widget.nutrient,
+                                        ),
                                       ),
                                     ),
                                     icon: Icon(
@@ -288,13 +290,13 @@ class _AnalyticspageState extends State<Analyticspage> {
                                     label: 'P1'),
                             widget.nutrient == 'Potássio (K)'
                                 ? DataPoint(
-                                position: Offset(140, 100),
-                                value: 100,
-                                label: 'P2')
+                                    position: Offset(140, 100),
+                                    value: 100,
+                                    label: 'P2')
                                 : DataPoint(
-                                position: Offset(140, 100),
-                                value: 35,
-                                label: 'P2'),
+                                    position: Offset(140, 100),
+                                    value: 35,
+                                    label: 'P2'),
                             DataPoint(
                                 position: Offset(200, 115),
                                 value: 50,
@@ -363,7 +365,7 @@ class _AnalyticspageState extends State<Analyticspage> {
                                     children: [
                                       Flexible(
                                         child: Text(
-                                          'Atenção: Pontos 02 e 03 precisam de atenção urgente do nutriente ${widget.nutrient}.',
+                                          'Atenção: O Ponto 03 precisa de atenção urgente para ${widget.nutrient}.',
                                           style: TextStyle(
                                             color: Colors.red,
                                           ),
@@ -396,7 +398,7 @@ class _AnalyticspageState extends State<Analyticspage> {
                                 ],
                               ),
                             ),
-                      Container(
+                      widget.nutrient == '' ? Container() : Container(
                         padding: EdgeInsets.only(top: 15, bottom: 25),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -405,7 +407,7 @@ class _AnalyticspageState extends State<Analyticspage> {
                               children: [
                                 Flexible(
                                   child: Text(
-                                    'Atenção: Pontos 01 e 05 estão com ótima concentração de ${widget.nutrient}.',
+                                    'Atenção: Pontos 02, 04 e 05 estão com ótima concentração de ${widget.nutrient}.',
                                     style: TextStyle(
                                       color: Colors.green,
                                     ),

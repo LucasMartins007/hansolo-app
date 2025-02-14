@@ -32,7 +32,7 @@ class _NutrientoptionspageState extends State<Nutrientoptionspage> {
                     padding: EdgeInsets.only(right: 25),
                   ),
                   Text(
-                    "Voltar ao Início",
+                    "Voltar",
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: Colors.white,

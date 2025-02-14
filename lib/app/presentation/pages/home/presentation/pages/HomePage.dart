@@ -50,52 +50,6 @@ class _HomepageState extends State<Homepage> {
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black26,
-                              blurRadius: 1,
-                              spreadRadius: 3,
-                              blurStyle: BlurStyle.inner,
-                              offset: Offset(3, 3),
-                            ),
-                          ],
-                        ),
-                        width: 275,
-                        height: 200,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              padding: EdgeInsets.only(bottom: 10),
-                              child: Icon(
-                                size: 50,
-                                Icons.analytics_sharp,
-                                color: Colors.white,
-                              ),
-                            ),
-                            Text(
-                              "Análise de solo",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      onTap: () => HomePageManager()
-                          .redirectTo(context, Nutrientoptionspage()),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Color.fromRGBO(129, 199, 132, 1),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
                                 color: Colors.black26,
                                 blurRadius: 1,
                                 spreadRadius: 3,
@@ -175,6 +129,52 @@ class _HomepageState extends State<Homepage> {
                         ),
                         Navigator.of(context).pop(),
                       },
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(129, 199, 132, 1),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 1,
+                              spreadRadius: 3,
+                              blurStyle: BlurStyle.inner,
+                              offset: Offset(3, 3),
+                            ),
+                          ],
+                        ),
+                        width: 275,
+                        height: 200,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(bottom: 10),
+                              child: Icon(
+                                size: 50,
+                                Icons.analytics_sharp,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              "Análise de solo",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      onTap: () => HomePageManager()
+                          .redirectTo(context, Nutrientoptionspage()),
                     ),
                   ],
                 ),

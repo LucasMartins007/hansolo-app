@@ -14,7 +14,8 @@ class HomePageManager {
 
   Future<void> pickFile() async {
     try {
-      FilePickerResult? result = await FilePicker.platform.pickFiles(initialDirectory: 'Documents');
+      FilePickerResult? result =
+          await FilePicker.platform.pickFiles(initialDirectory: 'Documents');
       if (result != null) {
         print("Arquivo selecionado e enviado para a api..");
       }
@@ -33,8 +34,7 @@ class HomePageManager {
         'file': await MultipartFile.fromFile(
           xmlFile.path,
           filename: 'Planilha.xlsx',
-          contentType:
-              DioMediaType('application', 'multipart/form-data'),
+          contentType: DioMediaType('application', 'multipart/form-data'),
         ),
       });
 
