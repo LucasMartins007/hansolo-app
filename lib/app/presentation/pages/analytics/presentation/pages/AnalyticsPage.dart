@@ -258,7 +258,7 @@ class _AnalyticspageState extends State<Analyticspage> {
                                     onPressed: () => Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => Openedanalytics(),
+                                        builder: (context) => Openedanalytics(nutrient: widget.nutrient,),
                                       ),
                                     ),
                                     icon: Icon(

@@ -163,7 +163,9 @@ class IntensityPainter extends CustomPainter {
 }
 
 class Openedanalytics extends StatefulWidget {
-  const Openedanalytics({super.key});
+  final nutrient;
+
+  const Openedanalytics({super.key, required this.nutrient});
 
   @override
   State<Openedanalytics> createState() => _OpenedanalyticsState();
@@ -210,7 +212,7 @@ class _OpenedanalyticsState extends State<Openedanalytics> {
             Container(
               padding: EdgeInsets.only(bottom: 15, top: 50),
               child: Text(
-                "Mapa da Análise",
+                "Análise - ${widget.nutrient}",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w600,
@@ -222,33 +224,45 @@ class _OpenedanalyticsState extends State<Openedanalytics> {
                 mapImageUrl:
                     'https://maps.googleapis.com/maps/api/staticmap?center=-24.952199,%20-53.575196&zoom=15&size=1600x1200&maptype=satellite&key=AIzaSyCVQmfg0Emt0T_2XVM6UdxynpUVcdkOOZw',
                 points: [
-                  DataPoint(
-                    position: Offset(210, 140),
-                    value: 55,
-                    label: 'P1',
-                  ),
-                  DataPoint(
-                    position: Offset(180, 195),
-                    value: 50,
-                    label: 'P2',
-                  ),
+                  widget.nutrient == 'Fósforo (P)'
+                      ? DataPoint(
+                          position: Offset(210, 140),
+                          value: 100,
+                          label: 'P1',
+                        )
+                      : DataPoint(
+                          position: Offset(210, 140),
+                          value: 55,
+                          label: 'P1',
+                        ),
+                  widget.nutrient == 'Potássio (K)'
+                      ? DataPoint(
+                          position: Offset(180, 195),
+                          value: 100,
+                          label: 'P2',
+                        )
+                      : DataPoint(
+                          position: Offset(180, 195),
+                          value: 35,
+                          label: 'P2',
+                        ),
                   DataPoint(
                     position: Offset(240, 195),
                     value: 50,
                     label: 'P3',
                   ),
                   DataPoint(
-                    position: Offset(265, 240),
+                    position: Offset(160, 240),
                     value: 90,
                     label: 'P4',
                   ),
                   DataPoint(
-                    position: Offset(170, 240),
+                    position: Offset(210, 240),
                     value: 90,
                     label: 'P5',
                   ),
                   DataPoint(
-                    position: Offset(215, 247),
+                    position: Offset(265, 247),
                     value: 70,
                     label: 'P6',
                   ),

@@ -148,7 +148,7 @@ class _HomepageState extends State<Homepage> {
                           },
                         ),
                         await Future.delayed(
-                          Duration(seconds: 3),
+                          Duration(seconds: 2),
                         ),
                         Navigator.of(context).pop(),
                         showDialog(
@@ -162,14 +162,17 @@ class _HomepageState extends State<Homepage> {
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     SizedBox(width: 20),
-                                    Text("Dados enviados com sucesso para Análise!!"),
+                                    Text(
+                                        "Dados enviados para Análise!!"),
                                   ],
                                 ),
                               ),
                             );
                           },
                         ),
-                        await Future.delayed(Duration(seconds: 1)),
+                        await Future.delayed(
+                          Duration(seconds: 1),
+                        ),
                         Navigator.of(context).pop(),
                       },
                     ),
