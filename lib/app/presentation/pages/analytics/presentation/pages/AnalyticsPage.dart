@@ -32,8 +32,7 @@ class IntensityMap extends StatelessWidget {
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Center(
-                  child: Text(
-                      'Erro ao carregar o mapa. Verifique a URL e a chave de API.'),
+                  child: Image.asset('images/staticmap.png'),
                 );
               },
             ),
